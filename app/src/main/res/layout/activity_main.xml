@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ACCFDF"
+    android:padding="15dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/fillingForm"
+        style="@style/textStyle"
+        android:paddingBottom="10dp"
+        android:text="Заполните форму"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/yourFIO"
+        style="@style/textStyle"
+        android:text="Ваше ФИО"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fillingForm" />
+
+    <EditText
+        android:id="@+id/FIO"
+        style="@style/textStyleForEditText"
+        android:hint="ФИО"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@id/yourFIO"
+        app:layout_constraintTop_toBottomOf="@id/yourFIO" />
+
+    <TextView
+        android:id="@+id/yourAge"
+        style="@style/textStyle"
+        android:text="Ваш Возраст"
+        app:layout_constraintStart_toStartOf="@id/FIO"
+        app:layout_constraintTop_toBottomOf="@id/FIO" />
+
+    <EditText
+        android:id="@+id/age"
+        style="@style/textStyleForEditText"
+        android:hint="Возраст"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@id/yourAge"
+        app:layout_constraintTop_toBottomOf="@id/yourAge" />
+
+    <TextView
+        android:id="@+id/yourPhone"
+        style="@style/textStyle"
+        android:text="Ваш Телефон"
+        app:layout_constraintStart_toStartOf="@id/age"
+        app:layout_constraintTop_toBottomOf="@id/age" />
+
+    <EditText
+        android:id="@+id/phone"
+        style="@style/textStyleForEditText"
+        android:hint="Номер телефона"
+        android:inputType="phone"
+        app:layout_constraintStart_toStartOf="@id/yourPhone"
+        app:layout_constraintTop_toBottomOf="@id/yourPhone" />
+
+    <TextView
+        android:id="@+id/yourEmail"
+        style="@style/textStyle"
+        android:text="Ваш E-mail"
+        app:layout_constraintStart_toStartOf="@id/phone"
+        app:layout_constraintTop_toBottomOf="@id/phone" />
+
+    <EditText
+        android:id="@+id/email"
+        style="@style/textStyleForEditText"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="@id/yourEmail"
+        app:layout_constraintTop_toBottomOf="@id/yourEmail" />
+
+    <TextView
+        android:id="@+id/textChoiceAnimals"
+        style="@style/textStyle"
+        android:text="Выберите ваши любимые домашние животные:"
+        app:layout_constraintStart_toStartOf="@id/email"
+        app:layout_constraintTop_toBottomOf="@id/email" />
+
+    <CheckBox
+        android:id="@+id/dog"
+        style="@style/textStyleForCheckBox_RadioButton"
+        android:text="Собака"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textChoiceAnimals" />
+
+    <CheckBox
+        android:id="@+id/cat"
+        style="@style/textStyleForCheckBox_RadioButton"
+        android:text="Кошка"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dog" />
+
+    <CheckBox
+        android:id="@+id/parrot"
+        style="@style/textStyleForCheckBox_RadioButton"
+        android:text="Попугай"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cat" />
+
+    <CheckBox
+        android:id="@+id/fish"
+        style="@style/textStyleForCheckBox_RadioButton"
+        android:text="Рыба"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/parrot" />
+
+    <TextView
+        android:id="@+id/textChoice1Position"
+        style="@style/textStyle"
+        android:text="Выберите то, что относится к вам:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fish" />
+
+    <RadioGroup
+        android:id="@+id/choiceRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@id/textChoice1Position"
+        app:layout_constraintTop_toBottomOf="@id/textChoice1Position">
+
+        <RadioButton
+            android:id="@+id/salary"
+            style="@style/textStyleForCheckBox_RadioButton"
+            android:text="Желаете работать на зарплату"
+            app:layout_constraintStart_toStartOf="@id/textChoice1Position"
+            app:layout_constraintTop_toBottomOf="@id/textChoice1Position" />
+
+        <RadioButton
+            android:id="@+id/volunteer"
+            style="@style/textStyleForCheckBox_RadioButton"
+            android:text="Желаете работать бесплатно волонтером"
+            app:layout_constraintStart_toStartOf="@id/salary"
+            app:layout_constraintTop_toBottomOf="@id/salary" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/inputDesiredSalaryAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Укажите желаемый размер зарплаты"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/choiceRadioButton" />
+
+    <Button
+        android:id="@+id/sellButton"
+        style="@style/textStyle"
+        android:backgroundTint="#23035A"
+        android:padding="20dp"
+        android:text="Отправить"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputDesiredSalaryAmount" />
+
+    <Button
+        android:layout_width="200dp"
+        android:id="@+id/startAgain"
+        style="@style/textStyle"
+        android:backgroundTint="#23035A"
+        android:padding="20dp"
+        android:visibility="gone"
+        android:text="Начать сначала"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="200dp"
+        android:id="@+id/finish"
+        style="@style/textStyle"
+        android:backgroundTint="#23035A"
+        android:padding="20dp"
+        android:visibility="gone"
+        android:text="Завершить"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/startAgain"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

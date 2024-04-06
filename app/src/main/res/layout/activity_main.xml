@@ -43,7 +43,7 @@
     <EditText
         android:id="@+id/age"
         style="@style/textStyleForEditText"
-        android:hint="Возраст"
+        android:hint="Возраст (полных лет))"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="@id/yourAge"
         app:layout_constraintTop_toBottomOf="@id/yourAge" />
@@ -58,7 +58,7 @@
     <EditText
         android:id="@+id/phone"
         style="@style/textStyleForEditText"
-        android:hint="Номер телефона"
+        android:hint="Номер телефона (8(xxx)xxx xx xx)"
         android:inputType="phone"
         app:layout_constraintStart_toStartOf="@id/yourPhone"
         app:layout_constraintTop_toBottomOf="@id/yourPhone" />
@@ -148,7 +148,7 @@
         android:id="@+id/inputDesiredSalaryAmount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Укажите желаемый размер зарплаты"
+        android:hint="Укажите желаемый размер зарплаты (в рублях)"
         android:inputType="number"
         android:textColor="@color/black"
         android:visibility="invisible"

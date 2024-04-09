@@ -58,7 +58,7 @@
     <EditText
         android:id="@+id/phone"
         style="@style/textStyleForEditText"
-        android:hint="Номер телефона (8(xxx)xxx xx xx)"
+        android:hint="Номер телефона (8xxxxxxxxxx)"
         android:inputType="phone"
         app:layout_constraintStart_toStartOf="@id/yourPhone"
         app:layout_constraintTop_toBottomOf="@id/yourPhone" />
